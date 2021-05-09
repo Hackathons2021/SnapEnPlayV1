@@ -8,7 +8,7 @@ Play your own map ✨
 <br>
 
 ## Inspiration
-We thought of magically giving life to your sketches by turning it into a game.
+When we noticed the huge amount of sketches that were being archived at school, we thought we could give some magic and life to the sketches.
 
 ## What it does
 It's a web based app which allows one to upload a sketch and makes a game out of it's pixelated analogue 
@@ -25,5 +25,8 @@ Below is the colour scheme to draw the sketch -
 
 ## Website Link
 <a href="https://snapenplay.herokuapp.com">Click Me</a>
+
+## Game Rules
+
  
 
