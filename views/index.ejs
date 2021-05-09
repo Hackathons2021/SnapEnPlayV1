@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets1/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">Snap En Play</a></h1>
+
+					<!-- Nav 
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li>
+											<a href="#">Phasellus consequat</a>
+											<ul>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="#">Nisl sed aliquam</a></li>
+												<li><a href="#">Dolore adipiscing</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+					-->
+					<!-- Banner -->
+						<section id="banner">
+							<header>
+								<h2>Sketch. Snap. Play.</h2>
+					<p>Fill your sketches with magic </p>
+							</header>
+						</section>
+
+					<!-- Intro -->
+						<section id="intro" class="container">
+							<div class="row">
+								<div class="col-8 col-12-medium">
+									
+									<form class = "myForm" method="post" action="/upload" enctype="multipart/form-data"name="upload">
+										<input class = "coverfull" type="file" id="upload" accept="image/*" name="upload" style="display: none;" onchange="preview_image(event)"/>
+										<div id="holder" style="" class="holder_default" onclick = "clicked_holder(event)">
+											<img src="" id="image_droped" style="border: 3px dashed #7A97FC;" class="hidden imginside">
+										</div>
+										<button type = "submit" class = "button" value="upload">Make a map</button>
+									</form>
+								</div>
+								<div class="col-4 col-12-medium">
+									<img class = "myimg img-fluid" src = "images1/Instructions-PixTeller.png" style = "margin-top: 10%;" alt = "Instructions">
+								</div>
+							</div>
+						</section>
+
+				</section>
+
+		</div>
+			<script>
+			function preview_image(event) {
+				var reader = new FileReader();
+				reader.readAsDataURL(event.target.files[0]);
+				reader.onload = function (){
+					var output = document.getElementById('image_droped');
+					output.src = reader.result;
+					console.log("A");
+					document.getElementById('holder').className='hover';
+					document.getElementById('image_droped').className="visible imginside img-fluid";
+					document.getElementById('my_file').className='nodisplay';
+				}
+				console.log(typeof (reader.result))
+			}
+			</script>
+			<script>
+				function clicked_holder(event) {
+					event.preventDefault();
+					console.log("A");
+					document.getElementById('upload').click();
+				}
+			</script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
