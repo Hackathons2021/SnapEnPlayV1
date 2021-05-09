@@ -25,5 +25,8 @@ Below is the colour scheme to draw the sketch -
 
 ## Website Link
 <a href="https://snapenplay.herokuapp.com">Click Me</a>
+
+## Game Rules
+
  
 
