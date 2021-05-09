@@ -83,7 +83,7 @@ router.get('/python', (req, res) => {
     var postkey = post.key
     b=postkey.toString()
     console.log(b)
-    res.render('third.ejs', { url: 'http://localhost:3000/share?key='+b, array: dataToSend })
+    res.render('third.ejs', { url: 'https://snapenplay.herokuapp.com/share?key='+b, array: dataToSend })
   });
 
 })
