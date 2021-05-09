@@ -8,11 +8,12 @@ Play your own map ✨
 <br>
 
 ## Inspiration
-When we noticed the huge amount of sketches that were being archived at school, we thought we could give some magic and life to the sketches.
+When we noticed the huge amount of sketches that were being archived at school, we thought we could give some magic and life to the sketches. Combined
 
 ## What it does
 It's a web based app which allows one to upload a sketch and makes a game out of it's pixelated analogue 
-<br>
+<br><br>
+Below is the example of how the sketch is converted to map-
 <p float="left">
 <img src="https://user-images.githubusercontent.com/81357954/117570298-1b7c5880-b0e7-11eb-95e8-89445fc43a76.png" alt="drawing" width="200">
 <img src="https://user-images.githubusercontent.com/81357954/117570343-58484f80-b0e7-11eb-82ed-d3195e9b6973.png" alt="drawing" width="200">
@@ -34,3 +35,11 @@ The blue blocks act like a trampoline and the black blocks are just normal block
 If you lose your lives or time is up, the game will be over and your final score will be displayed.
 Enjoy the magic!
 
+## Some sample sketches for the map
+(Ensure that the map is landscape image about 1280x960)
+<br><br>
+<p float="left">
+<img src= "https://user-images.githubusercontent.com/81357954/117573725-31921500-b0f7-11eb-927d-9282b3ff12d4.jpeg">
+<img src ="https://user-images.githubusercontent.com/81357954/117573658-d7914f80-b0f6-11eb-8ca7-cf76b9a271ba.jpeg">
+<img src ="https://user-images.githubusercontent.com/81357954/117573850-cdbc1c00-b0f7-11eb-89b8-a44f38911349.jpeg">
+</p>
