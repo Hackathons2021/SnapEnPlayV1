@@ -27,7 +27,7 @@ Below is the colour scheme to draw the sketch -
 <a href="https://snapenplay.herokuapp.com">Click Me</a>
 
 ## Game Rules
-Your image will be magically convertedd into a map for you to play in. 
+Your image will be magically converted into a map for you to play in. 
 You will have 3 lives and a time limit of 90 seconds where your objective is to collect as many green coins as possible to increase your score.
 You will lose a life if you touch a red block(dangerous) or if you fall off the map.
 The blue blocks act like a trampoline and the black blocks are just normal blocks where you can move around.
