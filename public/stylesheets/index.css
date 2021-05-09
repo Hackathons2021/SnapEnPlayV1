@@ -1,0 +1,132 @@
+.holder_default {
+    width:70%; 
+    height:90%; 
+    border: 3px dashed #ccc;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.holder:hover { 
+    height:auto;
+    justify-content: center;
+    align-content: center;
+    object-fit: contain;
+    object-position: center;
+    max-width: 60% !important;
+    border: 3px dashed #0c0 !important; 
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+    height: 100%;
+    width: auto;
+}
+
+.row {
+    display: flex;
+    height: 100%;
+}  
+
+.column {
+    float: left;
+    height: 100%;
+    align-content: center;
+}
+
+.left {
+    width: 50%;
+    max-width: 50%;
+    display: grid;
+    grid-template-rows: 25% 15% 45% 15%;
+    grid-template-areas:
+    "topone"
+    "midtopone"
+    "midbottomone"
+    "bottomone";
+}
+
+.topone {
+}
+
+.midtopone {
+    text-align: center;
+}
+
+.midbottomone {
+    object-fit: contain;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+.bottomone {
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.right {
+    width: 50%;
+}
+
+.imgtop {
+    max-width:80%;
+    max-height:70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: auto;
+}
+
+.imgside {
+    max-width:50%;
+    max-height:50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 0;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 90%;
+    margin-top: 3%;
+}
+
+.imginside {
+    max-width: fit-content;
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+}
