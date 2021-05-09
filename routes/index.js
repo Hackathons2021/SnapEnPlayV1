@@ -67,7 +67,7 @@ router.get('/python', (req, res) => {
 
   var dataToSend;
   // spawn new child process to call the python script
-  const python = spawn('python', ['model.py', req.query.id]);
+  const python = spawn('python3', ['model.py', req.query.id]);
   // collect data from script
   python.stdout.on('data', function (data) {
     console.log('Pipe data from python script ...');
@@ -81,9 +81,11 @@ router.get('/python', (req, res) => {
   python.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
     // send data to browser
-    var post = ref.push(dataToSend)
+    var post = ref.push('dataToSend')
     var postkey = post.key
-    res.render('third', { url: `http://localhost:3000/share?key=` + postkey, array: dataToSend })
+    b=postkey.toString()
+    console.log(b)
+    res.render('third.ejs', { url: 'http://localhost:3000/share?key='+b, array: dataToSend })
   });
 
 })

@@ -11,8 +11,8 @@
 	<meta charset="utf-8" />
 
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" name="viewport"
-		content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html" >
+	
 	<h1 id="ss">kk</h1>
 	<h1 id="aa">kk</h1>
 	<link rel="shortcut icon" href="TemplateData/favicon.ico">
@@ -119,9 +119,14 @@
 			productName: "Abra",
 			productVersion: "0.1",
 		};
-		var d =<% - JSON.stringify(array || null) %>;
+		
+		var d =<%- JSON.stringify(array ) %>
 		console.log(d)
 		document.getElementById("ss").innerHTML = d
+		var dw =<%- JSON.stringify(url ) %>
+		console.log(dw)
+		document.getElementById("aa").innerHTML = dw
+		
 		var container = document.querySelector("#unity-container");
 		var canvas = document.querySelector("#unity-canvas");
 		var loadingBar = document.querySelector("#unity-loading-bar");
