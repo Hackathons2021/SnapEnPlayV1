@@ -15,8 +15,6 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://snapenplay-default-rtdb.firebaseio.com/",
 });
-
-express.static.mime.define({ 'application/wasm': ['csv'] })
 let db = admin.database()
 var ref = db.ref("maps");
 var spawn = require('child_process').spawn
@@ -81,7 +79,7 @@ router.get('/python', (req, res) => {
   python.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
     // send data to browser
-    var post = ref.push('dataToSend')
+    var post = ref.push(dataToSend)
     var postkey = post.key
     b=postkey.toString()
     console.log(b)
@@ -102,14 +100,16 @@ router.get('/python', (req, res) => {
 //  })
 //url:`https://snapenplay.herokuapp.com/share?key=${key}`,
 router.get('/share', (req, res) => {
-  var key = req.query.key
+  //var key = req.query.key
   ref.on("value", function (snapshot) {
     chil = snapshot.val();
-    console.log(chil)
+    //console.log(chil)
     a = req.query.key
-    console.log(chil[a])
-    b = chil[a].toString()
-    res.render('third', { url: `https://snapenplay.herokuapp.com/share?key=` + b, array: `${chil[a]}` })
+    console.log(a)
+    b = chil[a]
+    console.log(b)
+    res.render('third', { url: 'https://snapenplay.herokuapp.com/share?key=' +a, array: `${chil[a]}` })
+    
   });
 })
 
