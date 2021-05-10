@@ -30,3 +30,8 @@ pip freeze > requirements.txt
 # For Image Upload From Frontend To Backend
 https://medium.com/swlh/uploading-images-to-your-node-js-backend-978261eb0724#:~:text=Set%20up%20the%20body%20to,be%20in%20the%20images%20folder
 Look up the backend index.js routes file for settings for multre
+
+
+# For Firebase
+https://www.youtube.com/watch?v=kX8by4eCyG4
+You cant redirect while inside accessing data and cant store in variable too , you have to choose render file in NodeJS
