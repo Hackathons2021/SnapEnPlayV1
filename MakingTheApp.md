@@ -12,8 +12,8 @@ heroku buildpacks:add heroku/python --app yourappname
 ### Change the python in it to python3 when running in localhost and change it to just python when pushing to heroku. 
 https://devcenter.heroku.com/articles/python-pip
 
-### Mention python version needed in runtime.txt for heroku to identify which version to use (python 2.7 doesnt support opencv and scikit-image) , ony some
-### versions are supported
+### Mention python version needed in runtime.txt for heroku to identify which version to use 
+(python 2.7 doesnt support opencv and scikit-image) , ony some versions are supported
 https://stackoverflow.com/questions/54837820/error-while-pushing-to-heroku-requested-runtime-is-not-available-for-this-stack
 https://devcenter.heroku.com/articles/python-support#supported-runtimes
 
