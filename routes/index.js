@@ -7,10 +7,7 @@ const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
 const csrfMiddleware = csrf({ cookie: true });
 const serviceAccount = require("./serviceAccountKey.json");
-// router.all("*", (req, res, next) => {
-//   res.cookie("XSRF-TOKEN", req.csrfToken());
-//   next();
-// });
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://snapenplay-default-rtdb.firebaseio.com/",
@@ -49,23 +46,18 @@ router.get('/', function (req, res, next) {
 
 });
 router.post('/upload', upload.single('upload'), (req, res) => {
-  // if(req.file) {
-  //     res.json(req.file);
-  // }
-  // else throw 'error';
-  //console.log(req.file)
   a = path.extname(req.file.originalname)
   console.log(req.file.originalname)
   b = a.split('.')
   console.log(b[1])
-  res.redirect('/python?id=' + b[1])//+path.extname(req.file.originalname))
+  res.redirect('/python?id=' + b[1])
 });
 
 router.get('/python', (req, res) => {
 
   var dataToSend;
   // spawn new child process to call the python script
-  const python = spawn('python', ['model.py', req.query.id]);
+  const python = spawn('python3', ['model.py', req.query.id]);
   // collect data from script
   python.stdout.on('data', function (data) {
     console.log('Pipe data from python script ...');
@@ -81,24 +73,12 @@ router.get('/python', (req, res) => {
     // send data to browser
     var post = ref.push(dataToSend)
     var postkey = post.key
-    b=postkey.toString()
+    b = postkey.toString()
     console.log(b)
-    res.render('third.ejs', { url: 'https://snapenplay.herokuapp.com/share?key='+b, array: dataToSend })
+    res.render('third.ejs', { url: 'https://snapenplay.herokuapp.com/share?key=' + b, array: dataToSend })
   });
 
 })
-
-
-
-//  router.get('/game',(req,res)=>{
-//   //var a=req.query.username
-//   var b=req.query.string
-// var post=ref.push(b);
-// var postkey=post.key
-// console.log('ll')
-// res.render('game',{array:b})
-//  })
-//url:`https://snapenplay.herokuapp.com/share?key=${key}`,
 router.get('/share', (req, res) => {
   //var key = req.query.key
   ref.on("value", function (snapshot) {
@@ -108,8 +88,8 @@ router.get('/share', (req, res) => {
     console.log(a)
     b = chil[a]
     console.log(b)
-    res.render('third', { url: 'https://snapenplay.herokuapp.com/share?key=' +a, array: `${chil[a]}` })
-    
+    res.render('third', { url: 'https://snapenplay.herokuapp.com/share?key=' + a, array: `${chil[a]}` })
+
   });
 })
 
