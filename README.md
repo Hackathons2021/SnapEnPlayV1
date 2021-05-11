@@ -39,6 +39,7 @@ You will have 3 lives and a time limit of 90 seconds where your objective is to 
 You will lose a life if you touch a red block(dangerous) or if you fall off the map.
 The blue blocks act like a trampoline and the black blocks are just normal blocks where you can move around.
 If you lose your lives or time is up, the game will be over and your final score will be displayed.
+Within the game, you can move right or left using the corresponding arrow keys. Use the up arrow key to jump, '<' to zoom in and '>' to zoom out.
 Enjoy the magic!
 
 ## Some sample sketches for the map
